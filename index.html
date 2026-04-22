@@ -578,6 +578,15 @@
     });
     btn.textContent = "Request sent! We'll be in touch soon.";
     btn.style.background = '#2D5A4E';
+
+	// Reset form after 3 seconds
+    setTimeout(() => {
+      e.target.reset();
+      btn.textContent = 'Request a free consultation';
+      btn.style.background = '#4A7C6B';
+      btn.disabled = false;
+    }, 5000);
+	  
   } catch (err) {
     btn.textContent = 'Something went wrong. Please try again.';
     btn.style.background = '#c0392b';
